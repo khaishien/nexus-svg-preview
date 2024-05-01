@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   build:
-    name: Build binaries
+    name: Sync Release Asset
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
