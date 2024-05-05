@@ -29,7 +29,6 @@
       "editor/title": [
         {
           "command": "nexus-svg.showPreview",
-          "when": "resourceExtname == .tsx",
           "alt": "nexus-svg.showPreview",
           "group": "navigation"
         }

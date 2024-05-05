@@ -1,7 +1,6 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
-import * as path from 'path';
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -24,7 +23,11 @@ export function activate(context: vscode.ExtensionContext) {
 
         let svgContent = '<svg ';
         const left = documentText.split('<svg');
-        svgContent += left[1].split('</svg>')[0] + '</svg>';
+        if (left.length > 1) {
+          svgContent += left[1].split('</svg>')[0] + '</svg>';
+        } else {
+          return null;
+        }
 
         //replace any custom color to green
         const regex = /\${color}/i;
