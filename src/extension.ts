@@ -30,7 +30,7 @@ export function activate(context: vscode.ExtensionContext) {
         }
 
         //replace any custom color to green
-        const regex = /\${color}/i;
+        const regex = /\${color}/g;
         svgContent = svgContent.replace(regex, '#000000');
 
         const panel = vscode.window.createWebviewPanel(
